@@ -19,10 +19,18 @@ public class PyramidWordTest {
     private PyramidWordController pyramidWordController;
 
     @Test
-    public void testIsPyramidWord() {
+    public void testIsPyramidWord_PASS() {
         String word = "banana";
         boolean result = pyramidWordController.callIsPyramidWord(word);
 
         assertTrue(result);
+    }
+
+    @Test
+    public void testIsPyramidWord_FAIL() {
+        String word = "bandana";
+        boolean result = pyramidWordController.callIsPyramidWord(word);
+
+        assertFalse(result);
     }
 }
